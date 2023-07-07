@@ -102,5 +102,91 @@
 #     print(numbers[i])
 #     i = i + 1
 
-for number in range(5):
-    print(number)
+# for number in range(5):
+#     print(number)
+
+# def count_vowels(string):
+#     counter = 0
+#     for letter in string:
+#         if letter in 'aeiou':
+#             counter += 1
+#     return counter
+
+
+# result = count_vowels("The quick brown fox! Letter eeaaoo")
+# print(result)
+
+# def reverse_words(string):
+#     words = string.split()
+#     reversed_words = words[::-1]
+#     reversed_sentence = " ".join(reversed_words)
+#     return reversed_sentence
+
+
+# result = reverse_words(
+#     "I wonder what it means to be human. Will I ever truly live?")
+# print(result)
+
+# below requires import
+# def is_palindrome(string):
+#     string = string.lower()
+#     string = string.replace(" ", "")
+#     string = string.translate(str.maketrans("", "", string.punctuation))
+#     reversed_string = string[::-1]
+#     return reversed_string == string
+
+
+# result = is_palindrome("Racecar")
+# print(result)
+
+# def is_anagram(string1, string2):
+#     string1 = string1.replace(" ", "")
+#     string2 = string2.replace(" ", "")
+#     string1 = string1.lower()
+#     string2 = string2.lower()
+
+#     if len(string1) != len(string2):
+#         return False
+#     for letter in string1:
+#         if letter in string2:
+#             string2 = string2.replace(letter, "", 1)
+#         else:
+#             return False
+
+#     return True
+
+# result = is_anagram("listen", "SileNT")
+# print(result)
+
+
+# def calculate_average(array):
+#     total = 0
+#     for number in array:
+#         total += number
+#     length = len(array)
+#     average = total/length
+#     return average
+
+
+# result = calculate_average([3, 3, 6])
+# print(result)
+
+input = "Hello my name is Maxwell"
+
+
+def longest_even(string):
+    longest_length = 0
+    longest_word = ""
+
+    words = string.split()
+    for word in words:
+        if len(word) % 2 == 0:
+            if len(word) > longest_length:
+                longest_length = len(word)
+                longest_word = word
+
+    return longest_word
+
+
+result = longest_even(input)
+print(result)
