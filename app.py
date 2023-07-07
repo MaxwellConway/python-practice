@@ -102,7 +102,8 @@
 #     print(numbers[i])
 #     i = i + 1
 
-# for number in range(5):
+# arr = [1, 2, 2, 2, 3, 4]
+# for number in range(arr[0], arr[len(arr) - 1]):
 #     print(number)
 
 # def count_vowels(string):
@@ -171,22 +172,85 @@
 # result = calculate_average([3, 3, 6])
 # print(result)
 
-input = "Hello my name is Maxwell"
+
+# input = "Hello my name is Maxwell"
+
+# def longest_even(string):
+#     longest_length = 0
+#     longest_word = ""
+
+#     words = string.split()
+#     for word in words:
+#         if len(word) % 2 == 0:
+#             if len(word) > longest_length:
+#                 longest_length = len(word)
+#                 longest_word = word
+
+#     return longest_word
 
 
-def longest_even(string):
-    longest_length = 0
-    longest_word = ""
-
-    words = string.split()
-    for word in words:
-        if len(word) % 2 == 0:
-            if len(word) > longest_length:
-                longest_length = len(word)
-                longest_word = word
-
-    return longest_word
+# result = longest_even(input)
+# print(result)
 
 
-result = longest_even(input)
+# SMALLEST DIFFERENCE
+# arr1 = [-1, 3, 13, 8, 22]
+# arr2 = [5, -4, 10, 13, 46, 30]
+
+
+# def smallestDifference(array1, array2):
+#     array1.sort()
+#     array2.sort()
+#     smallestDifferenceNumbers = []
+#     currentSmallestDifference = 1000
+#     for num1 in array1:
+#         for num2 in array2:
+#             if num1 > 0 and num2 > 0:
+#                 numDifference = num1 - num2
+#                 if numDifference < 0:
+#                     numDifference = numDifference * -1
+#                 if numDifference < currentSmallestDifference:
+#                     currentSmallestDifference = numDifference
+#                     smallestDifferenceNumbers = [num1, num2]
+#             if num1 < 0 and num2 > 0:
+#                 num1 = num1 * -1
+#                 numDifference = num1 + num2
+#                 if numDifference < currentSmallestDifference:
+#                     currentSmallestDifference = numDifference
+#                     smallestDifferenceNumbers = [num1 * -1, num2]
+#             if num2 < 0 and num1 > 0:
+#                 num2 = num2 * -1
+#                 numDifference = num1 + num2
+#                 if numDifference < currentSmallestDifference:
+#                     currentSmallestDifference = numDifference
+#                     smallestDifferenceNumbers = [num1, num2 * -1]
+#             if num2 < 0 and num1 < 0:
+#                 num1 = num1 * -1
+#                 num2 = num2 * -1
+#                 numDifference = num1 + num2
+#                 if numDifference < currentSmallestDifference:
+#                     currentSmallestDifference = numDifference
+#                     smallestDifferenceNumbers = [num1 * -1, num2 * -1]
+#     return smallestDifferenceNumbers
+
+
+# result = smallestDifference(arr1, arr2)
+# print(result)
+
+
+# MOVE ELEMENT TO END
+array = [3, 5, 19, 20, 6, 100, 4, 4, 15, 13, 19, 3, 20, 19, 3, 4, 4]
+toMove = 19
+
+
+def moveElementToEnd(array, toMove):
+    array.sort()
+    for num in array:
+        if num == toMove:
+            array.remove(num)
+            array.append(num)
+    return array
+
+
+result = moveElementToEnd(array, toMove)
 print(result)
